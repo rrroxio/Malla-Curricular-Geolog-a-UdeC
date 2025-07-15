@@ -10,7 +10,7 @@ body {
 h1 {
   font-family: 'Poppins', 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #553d2a; /* Marrón más oscuro para el título */
+  color: #553d2a !important; /* Marrón más oscuro para el título */
   text-align: center;
   margin-bottom: 45px;
   font-size: 2.2rem;
