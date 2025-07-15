@@ -9,7 +9,13 @@
 </head>
 
 <body>
-  <h1> Malla Interactiva para Geología UdeC</h1>
+  <!-- Botón de toggle para modo claro/oscuro -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+    <span class="light-icon">🌞</span>
+    <span class="dark-icon">🌙</span>
+  </button>
+
+  <h1>Malla Interactiva para Geología UdeC</h1>
   <div class="malla-grid">
     <div class="semestre" id="sem1">
       <h2>1° Semestre</h2>
@@ -21,104 +27,94 @@
 
     <div class="semestre" id="sem2">
       <h2>2° Semestre</h2>
-      <div class="ramo bloqueado" id="al" onclick="aprobar('al')">Álgebra Lineal</div>
-      <div class="ramo bloqueado" id="c2" onclick="aprobar('c2')">Cálculo II</div>
-      <div class="ramo bloqueado" id="mecanica" onclick="aprobar('mecanica')">Fundamentos de Mecánica</div>
-      <div class="ramo bloqueado" id="gg2" onclick="aprobar('gg2')">Geología General II</div>
+      <div class="ramo bloqueado" id="al">Álgebra Lineal</div>
+      <div class="ramo bloqueado" id="c2">Cálculo II</div>
+      <div class="ramo bloqueado" id="mecanica">Fundamentos de Mecánica</div>
+      <div class="ramo bloqueado" id="gg2">Geología General II</div>
       <div class="ramo" id="escritura">Introducción a la Escritura Académica</div>
     </div>
 
     <div class="semestre" id="sem3">
       <h2>3° Semestre</h2>
-      <div class="ramo bloqueado" id="cyo" onclick="aprobar('cyo')">Campos y Ondas</div>
-      <div class="ramo bloqueado" id="fcoqca" onclick="aprobar('fcoqca')">Fisicoquímica</div>
-      <div class="ramo bloqueado" id="crista" onclick="aprobar('crista')">Cristalografía y Mineralogía</div>
-      <div class="ramo bloqueado" id="progra" onclick="aprobar('progra')">Programación</div>
+      <div class="ramo bloqueado" id="cyo">Campos y Ondas</div>
+      <div class="ramo bloqueado" id="fcoqca">Fisicoquímica</div>
+      <div class="ramo bloqueado" id="crista">Cristalografía y Mineralogía</div>
+      <div class="ramo bloqueado" id="progra">Programación</div>
       <div class="ramo" id="ingles1">Inglés Comunicativo 1 Nivel Básico</div>
     </div>
 
     <div class="semestre" id="sem4">
       <h2>4° Semestre</h2>
-      <div class="ramo bloqueado" id="est" onclick="aprobar('est')">Estadística</div>
-      <div class="ramo bloqueado" id="geofisica" onclick="aprobar('geofisica')">Geofísica</div>
-      <div class="ramo bloqueado" id="petro" onclick="aprobar('petro')">Petrografía Macroscópica</div>
-      <div class="ramo bloqueado" id="paleo" onclick="aprobar('paleo')">Paleontología</div>
-      <div class="ramo bloqueado" id="ingles2" onclick="aprobar('ingles2')">Inglés Comunicativo 2 Nivel Básico Alto</div>
+      <div class="ramo bloqueado" id="est">Estadística</div>
+      <div class="ramo bloqueado" id="geofisica">Geofísica</div>
+      <div class="ramo bloqueado" id="petro">Petrografía Macroscópica</div>
+      <div class="ramo bloqueado" id="paleo">Paleontología</div>
+      <div class="ramo bloqueado" id="ingles2">Inglés Comunicativo 2 Nivel Básico Alto</div>
     </div>
 
     <div class="semestre" id="sem5">
       <h2>5° Semestre</h2>
-      <div class="ramo bloqueado" id="optica" onclick="aprobar('optica')">Mineralogía Óptica</div>
-      <div class="ramo bloqueado" id="gqca" onclick="aprobar('gqca')">Geoquímica</div>
-      <div class="ramo bloqueado" id="estrati1" onclick="aprobar('estrati1')">Estratigrafía y Ambientes Sedimentarios Continentales</div>
-      <div class="ramo bloqueado" id="herramientas" onclick="aprobar('herramientas')">Herramientas Matemáticas en Geología</div>
+      <div class="ramo bloqueado" id="optica">Mineralogía Óptica</div>
+      <div class="ramo bloqueado" id="gqca">Geoquímica</div>
+      <div class="ramo bloqueado" id="estrati1">Estratigrafía y Ambientes Sedimentarios Continentales</div>
+      <div class="ramo bloqueado" id="herramientas">Herramientas Matemáticas en Geología</div>
       <div class="ramo" id="complementaria">Complementario I</div>
-      <div class="ramo bloqueado" id="ingles3" onclick="aprobar('ingles3')">Inglés Comunicativo 3 Nivel Preintermedio</div>
+      <div class="ramo bloqueado" id="ingles3">Inglés Comunicativo 3 Nivel Preintermedio</div>
     </div>
 
     <div class="semestre" id="sem6">
       <h2>6° Semestre</h2>
-      <div class="ramo bloqueado" id="ignea" onclick="aprobar('ignea')">Petrografía y Petrología Ígnea</div>
-      <div class="ramo bloqueado" id="economia" onclick="aprobar('economia')">Economía</div>
-      <div class="ramo bloqueado" id="estrati2" onclick="aprobar('estrati2')">Estratigrafía y Ambientes Sedimentarios Marinos</div>
-      <div class="ramo bloqueado" id="estructural" onclick="aprobar('estructural')">Geología Estructural</div>
-      <div class="ramo bloqueado" id="ingles4" onclick="aprobar('ingles4')">Inglés Comunicativo 4 Nivel Intermedio</div>
+      <div class="ramo bloqueado" id="ignea">Petrografía y Petrología Ígnea</div>
+      <div class="ramo bloqueado" id="economia">Economía</div>
+      <div class="ramo bloqueado" id="estrati2">Estratigrafía y Ambientes Sedimentarios Marinos</div>
+      <div class="ramo bloqueado" id="estructural">Geología Estructural</div>
+      <div class="ramo bloqueado" id="ingles4">Inglés Comunicativo 4 Nivel Intermedio</div>
     </div>
 
     <div class="semestre" id="sem7">
       <h2>7° Semestre</h2>
-      <div class="ramo bloqueado" id="metamorfica" onclick="aprobar('metamorfica')">Petrografía y Petrología Metamórfica</div>
-      <div class="ramo bloqueado" id="sedimentaria" onclick="aprobar('sedimentaria')">Petrografía y Petrología Sedimentaria</div>
-      <div class="ramo bloqueado" id="geomorfo" onclick="aprobar('geomorfo')">Geomorfología</div>
-      <div class="ramo bloqueado" id="tectonica" onclick="aprobar('tectonica')">Geotectónica</div>
-      <div class="ramo bloqueado" id="proyectos" onclick="aprobar('proyectos')">Evaluación y Gestión de Proyectos</div>
+      <div class="ramo bloqueado" id="metamorfica">Petrografía y Petrología Metamórfica</div>
+      <div class="ramo bloqueado" id="sedimentaria">Petrografía y Petrología Sedimentaria</div>
+      <div class="ramo bloqueado" id="geomorfo">Geomorfología</div>
+      <div class="ramo bloqueado" id="tectonica">Geotectónica</div>
+      <div class="ramo bloqueado" id="proyectos">Evaluación y Gestión de Proyectos</div>
     </div>
 
     <div class="semestre" id="sem8">
       <h2>8° Semestre</h2>
-      <div class="ramo bloqueado" id="depositos" onclick="aprobar('depositos')">Depósitos Minerales</div>
-      <div class="ramo bloqueado" id="campo1" onclick="aprobar('campo1')">Geología de Campo I: Práctica Inicial</div>
-      <div class="ramo bloqueado" id="yacimientos" onclick="aprobar('yacimientos')">Yacimientos No-Metálicos y Recursos Energéticos</div>
-      <div class="ramo bloqueado" id="seminario" onclick="aprobar('seminario')">Seminario de Investigación</div>
-      <div class="ramo bloqueado" id="historica" onclick="aprobar('historica')">Geología Histórica</div>
+      <div class="ramo bloqueado" id="depositos">Depósitos Minerales</div>
+      <div class="ramo bloqueado" id="campo1">Geología de Campo I: Práctica Inicial</div>
+      <div class="ramo bloqueado" id="yacimientos">Yacimientos No-Metálicos y Recursos Energéticos</div>
+      <div class="ramo bloqueado" id="seminario">Seminario de Investigación</div>
+      <div class="ramo bloqueado" id="historica">Geología Histórica</div>
     </div>
 
     <div class="semestre" id="sem9">
       <h2>9° Semestre</h2>
-      <div class="ramo bloqueado" id="modelos" onclick="aprobar('modelos')">Modelos Geológicos de Yacimientos</div>
-      <div class="ramo bloqueado" id="ingenieril" onclick="aprobar('ingenieril')">Geología Ingenieril</div>
-      <div class="ramo bloqueado" id="hidro" onclick="aprobar('hidro')">Hidrogeología</div>
-      <div class="ramo bloqueado" id="andina" onclick="aprobar('andina')">Geología Andina</div>
-      <div class="ramo bloqueado" id="electiva1" onclick="aprobar('electiva1')">Electivo I</div>
-      <div class="ramo bloqueado" id="practica" onclick="aprobar('practica')">Práctica Profesional</div>
+      <div class="ramo bloqueado" id="modelos">Modelos Geológicos de Yacimientos</div>
+      <div class="ramo bloqueado" id="ingenieril">Geología Ingenieril</div>
+      <div class="ramo bloqueado" id="hidro">Hidrogeología</div>
+      <div class="ramo bloqueado" id="andina">Geología Andina</div>
+      <div class="ramo bloqueado" id="electiva1">Electivo I</div>
+      <div class="ramo bloqueado" id="practica">Práctica Profesional</div>
     </div>
 
     <div class="semestre" id="sem10">
       <h2>10° Semestre</h2>
-      <div class="ramo bloqueado" id="campo2" onclick="aprobar('campo2')">Geología de Campo II: Práctica Intermedia</div>
-      <div class="ramo bloqueado" id="ambiental" onclick="aprobar('ambiental')">Geología Ambiental</div>
-      <div class="ramo bloqueado" id="volca" onclick="aprobar('volca')">Volcanología</div>
-      <div class="ramo bloqueado" id="minas" onclick="aprobar('minas')">Geología de Minas y Exploración Minera</div>
+      <div class="ramo bloqueado" id="campo2">Geología de Campo II: Práctica Intermedia</div>
+      <div class="ramo bloqueado" id="ambiental">Geología Ambiental</div>
+      <div class="ramo bloqueado" id="volca">Volcanología</div>
+      <div class="ramo bloqueado" id="minas">Geología de Minas y Exploración Minera</div>
     </div>
 
-       <div class="semestre" id="sem11">
+    <div class="semestre" id="sem11">
       <h2>11° Semestre</h2>
-      <div class="ramo bloqueado" id="habprof" onclick="aprobar('habprof')">Habilitación Profesional</div>
-      <div class="ramo bloqueado" id="electiva2" onclick="aprobar('electiva2')">Electivo II</div>
-      <div class="ramo bloqueado" id="electiva3" onclick="aprobar('electiva3')">Electivo III</div>
+      <div class="ramo bloqueado" id="habprof">Habilitación Profesional</div>
+      <div class="ramo bloqueado" id="electiva2">Electivo II</div>
+      <div class="ramo bloqueado" id="electiva3">Electivo III</div>
     </div>
   </div>
 
   <script src="script.js"></script>
-
-  <style>
-    h1 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: #3e2723;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-  </style>
 </body>
 </html>
