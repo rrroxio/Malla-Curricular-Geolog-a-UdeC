@@ -3,106 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malla Interactiva</title>
+    <title>Malla Curricular Geología</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Malla Curricular Geología</h1>
+
     <div class="malla">
         <!-- Semestre 1 -->
         <div class="semestre" id="semestre1">
             <div class="ramo" id="ramo1" onclick="desbloquear(2, 3, 4, 5)">Álgebra y Trigonometría</div>
-            <div class="ramo" id="ramo2" style="display:none;" onclick="desbloquear(6, 7)">Cálculo I</div>
-            <div class="ramo" id="ramo3" style="display:none;" onclick="desbloquear(8)">Geología General I</div>
-            <div class="ramo" id="ramo4" style="display:none;" onclick="desbloquear(9)">Química General</div>
+            <div class="ramo bloqueado" id="ramo2" onclick="desbloquear(6, 7)">Cálculo I</div>
+            <div class="ramo bloqueado" id="ramo3" onclick="desbloquear(8)">Geología General I</div>
+            <div class="ramo bloqueado" id="ramo4" onclick="desbloquear(9)">Química General</div>
         </div>
 
         <!-- Semestre 2 -->
         <div class="semestre" id="semestre2">
-            <div class="ramo" id="ramo5" style="display:none;" onclick="desbloquear(10, 11)">Álgebra Lineal</div>
-            <div class="ramo" id="ramo6" style="display:none;" onclick="desbloquear(12)">Cálculo II</div>
-            <div class="ramo" id="ramo7" style="display:none;" onclick="desbloquear(13)">Fundamentos de Mecánica</div>
-            <div class="ramo" id="ramo8" style="display:none;" onclick="desbloquear(14)">Geología General II</div>
-            <div class="ramo" id="ramo9" style="display:none;" onclick="desbloquear(15)">Introducción a la escritura académica</div>
+            <div class="ramo bloqueado" id="ramo5" onclick="desbloquear(10, 11)">Álgebra Lineal</div>
+            <div class="ramo bloqueado" id="ramo6" onclick="desbloquear(12)">Cálculo II</div>
+            <div class="ramo bloqueado" id="ramo7" onclick="desbloquear(13)">Fundamentos de Mecánica</div>
+            <div class="ramo bloqueado" id="ramo8" onclick="desbloquear(14)">Geología General II</div>
+            <div class="ramo bloqueado" id="ramo9" onclick="desbloquear(15)">Introducción a la escritura académica</div>
         </div>
 
         <!-- Semestre 3 -->
         <div class="semestre" id="semestre3">
-            <div class="ramo" id="ramo10" style="display:none;" onclick="desbloquear(16, 17)">Campos y Ondas</div>
-            <div class="ramo" id="ramo11" style="display:none;" onclick="desbloquear(18)">Fisicoquímica</div>
-            <div class="ramo" id="ramo12" style="display:none;" onclick="desbloquear(19)">Cristalografía y Mineralogía</div>
-            <div class="ramo" id="ramo13" style="display:none;" onclick="desbloquear(20)">Programación</div>
-            <div class="ramo" id="ramo14" style="display:none;" onclick="desbloquear(21)">Inglés Comunicativo 1 Nivel Básico</div>
+            <div class="ramo bloqueado" id="ramo10" onclick="desbloquear(16, 17)">Campos y Ondas</div>
+            <div class="ramo bloqueado" id="ramo11" onclick="desbloquear(18)">Fisicoquímica</div>
+            <div class="ramo bloqueado" id="ramo12" onclick="desbloquear(19)">Cristalografía y Mineralogía</div>
+            <div class="ramo bloqueado" id="ramo13" onclick="desbloquear(20)">Programación</div>
+            <div class="ramo bloqueado" id="ramo14" onclick="desbloquear(21)">Inglés Comunicativo 1 Nivel Básico</div>
         </div>
 
         <!-- Semestre 4 -->
         <div class="semestre" id="semestre4">
-            <div class="ramo" id="ramo15" style="display:none;" onclick="desbloquear(22)">Estadística</div>
-            <div class="ramo" id="ramo16" style="display:none;" onclick="desbloquear(23)">Geofísica</div>
-            <div class="ramo" id="ramo17" style="display:none;" onclick="desbloquear(24)">Petrografía macroscópica</div>
-            <div class="ramo" id="ramo18" style="display:none;" onclick="desbloquear(25)">Paleontología</div>
-            <div class="ramo" id="ramo19" style="display:none;" onclick="desbloquear(26)">Inglés Comunicativo 2 Nivel Básico Alto</div>
+            <div class="ramo bloqueado" id="ramo15" onclick="desbloquear(22)">Estadística</div>
+            <div class="ramo bloqueado" id="ramo16" onclick="desbloquear(23)">Geofísica</div>
+            <div class="ramo bloqueado" id="ramo17" onclick="desbloquear(24)">Petrografía macroscópica</div>
+            <div class="ramo bloqueado" id="ramo18" onclick="desbloquear(25)">Paleontología</div>
+            <div class="ramo bloqueado" id="ramo19" onclick="desbloquear(26)">Inglés Comunicativo 2 Nivel Básico Alto</div>
         </div>
 
         <!-- Semestre 5 -->
         <div class="semestre" id="semestre5">
-            <div class="ramo" id="ramo20" style="display:none;" onclick="desbloquear(27)">Mineralogía Óptica</div>
-            <div class="ramo" id="ramo21" style="display:none;" onclick="desbloquear(28)">Geoquímica</div>
-            <div class="ramo" id="ramo22" style="display:none;" onclick="desbloquear(29)">Estratigrafía y Ambientes Sedimentarios Continentales</div>
-            <div class="ramo" id="ramo23" style="display:none;" onclick="desbloquear(30)">Herramientas Matemáticas en Geología</div>
-            <div class="ramo" id="ramo24" style="display:none;" onclick="desbloquear(31)">Complementaria 1</div>
-            <div class="ramo" id="ramo25" style="display:none;" onclick="desbloquear(32)">Inglés Comunicativo 3 Nivel Preintermedio</div>
+            <div class="ramo bloqueado" id="ramo20" onclick="desbloquear(27)">Mineralogía Óptica</div>
+            <div class="ramo bloqueado" id="ramo21" onclick="desbloquear(28)">Geoquímica</div>
+            <div class="ramo bloqueado" id="ramo22" onclick="desbloquear(29)">Estratigrafía y Ambientes Sedimentarios Continentales</div>
+            <div class="ramo bloqueado" id="ramo23" onclick="desbloquear(30)">Herramientas Matemáticas en Geología</div>
+            <div class="ramo bloqueado" id="ramo24" onclick="desbloquear(31)">Complementaria 1</div>
+            <div class="ramo bloqueado" id="ramo25" onclick="desbloquear(32)">Inglés Comunicativo 3 Nivel Preintermedio</div>
         </div>
 
         <!-- Semestre 6 -->
         <div class="semestre" id="semestre6">
-            <div class="ramo" id="ramo26" style="display:none;" onclick="desbloquear(33)">Petrografía y Petrología Ígnea</div>
-            <div class="ramo" id="ramo27" style="display:none;" onclick="desbloquear(34)">Economía</div>
-            <div class="ramo" id="ramo28" style="display:none;" onclick="desbloquear(35)">Estratigrafía y Ambientes Sedimentarios Marinos</div>
-            <div class="ramo" id="ramo29" style="display:none;" onclick="desbloquear(36)">Geología Estructural</div>
-            <div class="ramo" id="ramo30" style="display:none;" onclick="desbloquear(37)">Inglés Comunicativo 4 Nivel Intermedio</div>
+            <div class="ramo bloqueado" id="ramo26" onclick="desbloquear(33)">Petrografía y Petrología Ígnea</div>
+            <div class="ramo bloqueado" id="ramo27" onclick="desbloquear(34)">Economía</div>
+            <div class="ramo bloqueado" id="ramo28" onclick="desbloquear(35)">Estratigrafía y Ambientes Sedimentarios Marinos</div>
+            <div class="ramo bloqueado" id="ramo29" onclick="desbloquear(36)">Geología Estructural</div>
+            <div class="ramo bloqueado" id="ramo30" onclick="desbloquear(37)">Inglés Comunicativo 4 Nivel Intermedio</div>
         </div>
 
         <!-- Semestre 7 -->
         <div class="semestre" id="semestre7">
-            <div class="ramo" id="ramo31" style="display:none;" onclick="desbloquear(38)">Petrografía y Petrología Metamórfica</div>
-            <div class="ramo" id="ramo32" style="display:none;" onclick="desbloquear(39)">Petrografía y Petrología Sedimentaria</div>
-            <div class="ramo" id="ramo33" style="display:none;" onclick="desbloquear(40)">Geomorfología</div>
-            <div class="ramo" id="ramo34" style="display:none;" onclick="desbloquear(41)">Geotectónica</div>
-            <div class="ramo" id="ramo35" style="display:none;" onclick="desbloquear(42)">Evaluación y Gestión de Proyectos</div>
+            <div class="ramo bloqueado" id="ramo31" onclick="desbloquear(38)">Petrografía y Petrología Metamórfica</div>
+            <div class="ramo bloqueado" id="ramo32" onclick="desbloquear(39)">Petrografía y Petrología Sedimentaria</div>
+            <div class="ramo bloqueado" id="ramo33" onclick="desbloquear(40)">Geomorfología</div>
+            <div class="ramo bloqueado" id="ramo34" onclick="desbloquear(41)">Geotectónica</div>
+            <div class="ramo bloqueado" id="ramo35" onclick="desbloquear(42)">Evaluación y Gestión de Proyectos</div>
         </div>
 
         <!-- Semestre 8 -->
         <div class="semestre" id="semestre8">
-            <div class="ramo" id="ramo36" style="display:none;" onclick="desbloquear(43)">Depósitos Minerales</div>
-            <div class="ramo" id="ramo37" style="display:none;" onclick="desbloquear(44)">Geología de Campo 1: Práctica Inicial</div>
-            <div class="ramo" id="ramo38" style="display:none;" onclick="desbloquear(45)">Yacimientos No-Metálicos y Recursos Energéticos</div>
-            <div class="ramo" id="ramo39" style="display:none;" onclick="desbloquear(46)">Seminario de Investigación</div>
-            <div class="ramo" id="ramo40" style="display:none;" onclick="desbloquear(47)">Geología Histórica</div>
+            <div class="ramo bloqueado" id="ramo36" onclick="desbloquear(43)">Depósitos Minerales</div>
+            <div class="ramo bloqueado" id="ramo37" onclick="desbloquear(44)">Geología de Campo 1: Práctica Inicial</div>
+            <div class="ramo bloqueado" id="ramo38" onclick="desbloquear(45)">Yacimientos No-Metálicos y Recursos Energéticos</div>
+            <div class="ramo bloqueado" id="ramo39" onclick="desbloquear(46)">Seminario de Investigación</div>
+            <div class="ramo bloqueado" id="ramo40" onclick="desbloquear(47)">Geología Histórica</div>
         </div>
 
         <!-- Semestre 9 -->
         <div class="semestre" id="semestre9">
-            <div class="ramo" id="ramo41" style="display:none;" onclick="desbloquear(48)">Modelos Geológicos de Yacimientos</div>
-            <div class="ramo" id="ramo42" style="display:none;" onclick="desbloquear(49)">Geología Ingenieril</div>
-            <div class="ramo" id="ramo43" style="display:none;" onclick="desbloquear(50)">Hidrogeología</div>
-            <div class="ramo" id="ramo44" style="display:none;" onclick="desbloquear(51)">Geología Andina</div>
-            <div class="ramo" id="ramo45" style="display:none;" onclick="desbloquear(52)">Electiva 1</div>
-            <div class="ramo" id="ramo46" style="display:none;" onclick="desbloquear(53)">Práctica Profesional</div>
+            <div class="ramo bloqueado" id="ramo41" onclick="desbloquear(48)">Modelos Geológicos de Yacimientos</div>
+            <div class="ramo bloqueado" id="ramo42" onclick="desbloquear(49)">Geología Ingenieril</div>
+            <div class="ramo bloqueado" id="ramo43" onclick="desbloquear(50)">Hidrogeología</div>
+            <div class="ramo bloqueado" id="ramo44" onclick="desbloquear(51)">Geología Andina</div>
+            <div class="ramo bloqueado" id="ramo45" onclick="desbloquear(52)">Electiva 1</div>
+            <div class="ramo bloqueado" id="ramo46" onclick="desbloquear(53)">Práctica Profesional</div>
         </div>
 
         <!-- Semestre 10 -->
         <div class="semestre" id="semestre10">
-            <div class="ramo" id="ramo47" style="display:none;" onclick="desbloquear(54)">Geología de Campo II: Práctica Intermedia</div>
-            <div class="ramo" id="ramo48" style="display:none;" onclick="desbloquear(55)">Geología Ambiental</div>
-            <div class="ramo" id="ramo49" style="display:none;" onclick="desbloquear(56)">Volcanología</div>
-            <div class="ramo" id="ramo50" style="display:none;" onclick="desbloquear(57)">Geología de Minas y Exploración Minera</div>
+            <div class="ramo bloqueado" id="ramo47" onclick="desbloquear(54)">Geología de Campo II: Práctica Intermedia</div>
+            <div class="ramo bloqueado" id="ramo48" onclick="desbloquear(55)">Geología Ambiental</div>
+            <div class="ramo bloqueado" id="ramo49" onclick="desbloquear(56)">Volcanología</div>
+            <div class="ramo bloqueado" id="ramo50" onclick="desbloquear(57)">Geología de Minas y Exploración Minera</div>
         </div>
 
         <!-- Semestre 11 -->
         <div class="semestre" id="semestre11">
-            <div class="ramo" id="ramo51" style="display:none;" onclick="desbloquear(58)">Habilitación Profesional</div>
-            <div class="ramo" id="ramo52" style="display:none;" onclick="desbloquear(59)">Electiva 2</div>
-            <div class="ramo" id="ramo53" style="display:none;" onclick="desbloquear(60)">Electiva 3</div>
+            <div class="ramo bloqueado" id="ramo51" onclick="desbloquear(58)">Habilitación Profesional</div>
+            <div class="ramo bloqueado" id="ramo52" onclick="desbloquear(59)">Electiva 2</div>
+            <div class="ramo bloqueado" id="ramo53" onclick="desbloquear(60)">Electiva 3</div>
         </div>
     </div>
 
