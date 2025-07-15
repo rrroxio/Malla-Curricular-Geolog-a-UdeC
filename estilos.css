@@ -4,8 +4,8 @@ body {
 
 .malla {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 50px;
 }
 
@@ -17,22 +17,32 @@ body {
 }
 
 .ramo {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    border: 2px solid #ddd;
     background-color: #f4f4f4;
     text-align: center;
     cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .ramo:hover {
     background-color: #ddd;
 }
 
-.ramo.aprobado {
-    background-color: #8aff80;  /* Color verde para ramos aprobados */
+.ramo.bloqueado {
+    background-color: #b0b0b0;  /* Color gris para los ramos bloqueados */
+    cursor: not-allowed;
 }
 
 .ramo.desbloqueado {
-    background-color: #ffeb3b;  /* Color amarillo para ramos desbloqueados */
+    background-color: #8aff80;  /* Color verde claro para los ramos desbloqueados */
+    cursor: pointer;
 }
 
+.ramo.aprobado {
+    background-color: #ffeb3b;  /* Color amarillo para los ramos aprobados */
+}
+
+h1 {
+    text-align: center;
+}
