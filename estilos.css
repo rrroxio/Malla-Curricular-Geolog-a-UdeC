@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #e5e8e8;
+  background-color: #f2f4f4;
   margin: 0;
   padding: 20px;
 }
@@ -8,7 +8,7 @@ body {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #c2185b;
+  color: #7f8c8d;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -23,8 +23,8 @@ h1 {
 
 .semestre {
   min-width: 220px;
-  background-color: #ffe4ec;
-  border: 2px solid #f48fb1;
+  background-color: ##e5e8e8;
+  border: 2px solid #7f8c8d;
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -32,16 +32,16 @@ h1 {
 
 .semestre h2 {
   text-align: center;
-  color: #ad1457;
+  color: #ccd1d1;
   font-size: 1.1em;
   margin-bottom: 12px;
-  border-bottom: 1px solid #f8bbd0;
+  border-bottom: 1px solid #7f8c8d;
   padding-bottom: 6px;
 }
 
 .ramo {
   background: linear-gradient(145deg, #f8bbd0, #ec9fb9);
-  border: 1px solid #c2185b;
+  border: 1px solid #7f8c8d;
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
@@ -50,14 +50,14 @@ h1 {
   color: #880e4f;
   font-weight: 600;
   /* Sombra para efecto 3D */
-  box-shadow: 4px 4px 8px #c28aa2, -4px -4px 8px #ffcee1;
+  box-shadow: 4px 4px 8px #7f8c8d, -4px -4px 8px #7f8c8d;
   transition: all 0.3s ease;
   user-select: none;
 }
 
 .ramo:hover {
   background: linear-gradient(145deg, #f48fb1, #e47c9d);
-  box-shadow: 6px 6px 10px #b67288, -6px -6px 10px #ffbed4;
+  box-shadow: 6px 6px 10px #7f8c8d, -6px -6px 10px #7f8c8d;
   color: #5c0040;
   transform: translateY(-3px);
 }
