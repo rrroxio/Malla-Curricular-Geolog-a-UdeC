@@ -27,7 +27,7 @@ const prerequisitos = {
   'ingles3': ['ingles2'],
   'ignea': ['optica','gqca'],
   'economia': [],
-  'estrati2': ['estrati', 'paleo'],
+  'estrati2': ['estrati1', 'paleo'], // Corregido: era 'estrati' en lugar de 'estrati1'
   'estructural': ['petro'],
   'ingles4': ['ingles3'],
   'metamorfica': ['ignea'],
@@ -65,25 +65,23 @@ function guardarAprobados(aprobados) {
   localStorage.setItem('mallaAprobados', JSON.stringify(aprobados));
 }
 
-
-// Actualiza qué ramos están desbloqueados o bloqueados según prerrequisitos y créditos especiales
+// Actualiza qué ramos están desbloqueados o bloqueados según prerrequisitos
 function actualizarDesbloqueos() {
   const aprobados = obtenerAprobados();
-
 
   for (const [destino, reqs] of Object.entries(prerequisitos)) {
     const elem = document.getElementById(destino);
     if (!elem) continue;
 
-    // Verificar si se cumplen prerrequisitos normales
-    let puedeDesbloquear = reqs.every(r => aprobados.includes(r));
-
+    // Verificar si se cumplen prerrequisitos
     const puedeDesbloquear = reqs.length === 0 || reqs.every(r => aprobados.includes(r));
-    
 
     if (!elem.classList.contains('aprobado')) {
-      if (puedeDesbloquear) elem.classList.remove('bloqueado');
-      else elem.classList.add('bloqueado');
+      if (puedeDesbloquear) {
+        elem.classList.remove('bloqueado');
+      } else {
+        elem.classList.add('bloqueado');
+      }
     } else {
       // Si está aprobado, no debe estar bloqueado
       elem.classList.remove('bloqueado');
@@ -91,7 +89,7 @@ function actualizarDesbloqueos() {
   }
 }
 
-// Maneja el clic para aprobar o desaprobar un ramo (solo si no está bloqueado)
+// Maneja el clic para aprobar o desaprobar un ramo
 function aprobar(e) {
   const ramo = e.currentTarget;
   if (ramo.classList.contains('bloqueado')) return;
@@ -110,10 +108,11 @@ function aprobar(e) {
   actualizarDesbloqueos();
 }
 
-// Al cargar la página, asignar eventos, cargar progreso y actualizar desbloqueos
+// Inicialización
 window.addEventListener('DOMContentLoaded', () => {
   const todosRamos = document.querySelectorAll('.ramo');
 
+  // Cargar progreso guardado
   const aprobados = obtenerAprobados();
   todosRamos.forEach(ramo => {
     if (aprobados.includes(ramo.id)) {
@@ -121,9 +120,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Asignar eventos
   todosRamos.forEach(ramo => {
     ramo.addEventListener('click', aprobar);
   });
 
+  // Actualizar estado inicial
   actualizarDesbloqueos();
 });
