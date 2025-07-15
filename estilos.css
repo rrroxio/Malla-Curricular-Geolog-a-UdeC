@@ -1,101 +1,135 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f0e6; /* Beige claro para el fondo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e3d7bf; /* Fondo beige claro */
   margin: 0;
-  padding: 20px;
+  padding: 25px;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #3e2723; /* Marrón oscuro para el título */
+  color: #553d2a; /* Marrón más oscuro para el título */
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
 }
 
 .malla-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 15px;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
 .semestre {
-  background-color: #fff8e1; /* Beige muy claro */
-  border: 2px solid #d7ccc8; /* Marrón claro para el borde */
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(62, 39, 35, 0.1); /* Sombra marrón suave */
+  background-color: #ff9e1; /* Beige más claro */
+  border: 2px solid #c7b89f; /* Borde marrón claro */
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(85, 61, 42, 0.08);
   break-inside: avoid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.semestre:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(85, 61, 42, 0.12);
 }
 
 .semestre h2 {
   text-align: center;
-  color: #5d4037; /* Marrón medio */
-  font-size: 1.1em;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #d7ccc8;
-  padding-bottom: 6px;
+  color: #69503c; /* Marrón medio */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c7b89f;
+  padding-bottom: 8px;
+  font-weight: 600;
 }
 
 .ramo {
-  background: linear-gradient(145deg, #efebe9, #d7ccc8); /* Gradiente de marrones claros */
-  border: 1px solid #a1887f; /* Marrón medio */
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 10px;
+  background: linear-gradient(145deg, #ff9e1, #e3d7bf);
+  border: 1px solid #ab9680;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
   text-align: center;
   cursor: pointer;
-  color: #4e342e; /* Marrón oscuro */
+  color: #514633; /* Marrón oscuro para texto */
   font-weight: 600;
-  box-shadow: 2px 2px 6px rgba(62, 39, 35, 0.05);
-  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(107, 82, 60, 0.1);
+  transition: all 0.25s ease;
   user-select: none;
 }
 
 .ramo:hover {
-  background: linear-gradient(145deg, #d7ccc8, #bcaaa4);
-  box-shadow: 3px 3px 8px rgba(62, 39, 35, 0.1);
-  color: #3e2723; /* Marrón más oscuro al hover */
-  transform: translateY(-2px);
+  background: linear-gradient(145deg, #e3d7bf, #c7b89f);
+  box-shadow: 4px 4px 10px rgba(107, 82, 60, 0.15);
+  color: #553d2a;
+  transform: translateY(-3px);
 }
 
 .ramo:active {
-  box-shadow: inset 2px 2px 4px rgba(62, 39, 35, 0.1);
+  box-shadow: inset 3px 3px 6px rgba(107, 82, 60, 0.2);
   transform: translateY(1px);
 }
 
 .ramo.bloqueado {
-  background-color: #efebe9;
-  color: #8d6e63; /* Marrón claro para texto bloqueado */
+  background: linear-gradient(145deg, #f5f0e8, #e3d7bf);
+  color: #907761; /* Marrón claro para texto bloqueado */
   border-style: dashed;
-  border-color: #a1887f;
+  border-color: #ab9680;
   cursor: not-allowed;
   box-shadow: none;
-  background: linear-gradient(145deg, #efebe9, #d7ccc8);
 }
 
 .ramo.aprobado {
-  background: linear-gradient(145deg, #bcaaa4, #8d6e63) !important;
-  color: #fff8e1; /* Texto claro sobre fondo oscuro */
-  border-color: #5d4037;
+  background: linear-gradient(145deg, #7e634e, #69503c) !important;
+  color: #e3d7bf; /* Texto claro sobre fondo oscuro */
+  border-color: #514633;
   text-decoration: line-through;
   font-style: italic;
-  box-shadow: 2px 2px 6px rgba(62, 39, 35, 0.1);
+  box-shadow: 3px 3px 8px rgba(107, 82, 60, 0.1);
 }
 
 /* Media queries para ajustes responsivos */
+@media (max-width: 1024px) {
+  .malla-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .malla-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
   }
 }
 
 @media (max-width: 480px) {
   .malla-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .semestre {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
   }
 }
