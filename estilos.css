@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* Gris claro para el fondo */
+  background-color: #f5f0e6; /* Beige claro para el fondo */
   margin: 0;
   padding: 20px;
   overflow-x: hidden;
@@ -9,7 +9,7 @@ body {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #333333; /* Gris oscuro para el título */
+  color: #3e2723; /* Marrón oscuro para el título */
   text-align: center;
   margin-bottom: 40px;
 }
@@ -24,67 +24,67 @@ h1 {
 }
 
 .semestre {
-  background-color: #ffffff; /* Blanco puro para los semestres */
-  border: 2px solid #e0e0e0; /* Gris muy claro para el borde */
+  background-color: #fff8e1; /* Beige muy claro */
+  border: 2px solid #d7ccc8; /* Marrón claro para el borde */
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+  box-shadow: 0 2px 8px rgba(62, 39, 35, 0.1); /* Sombra marrón suave */
   break-inside: avoid;
 }
 
 .semestre h2 {
   text-align: center;
-  color: #424242; /* Gris oscuro */
+  color: #5d4037; /* Marrón medio */
   font-size: 1.1em;
   margin-bottom: 12px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #d7ccc8;
   padding-bottom: 6px;
 }
 
 .ramo {
-  background: linear-gradient(145deg, #f5f5f5, #eeeeee); /* Gradiente de grises */
-  border: 1px solid #bdbdbd; /* Gris medio para el borde */
+  background: linear-gradient(145deg, #efebe9, #d7ccc8); /* Gradiente de marrones claros */
+  border: 1px solid #a1887f; /* Marrón medio */
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
   text-align: center;
   cursor: pointer;
-  color: #212121; /* Gris casi negro para el texto */
+  color: #4e342e; /* Marrón oscuro */
   font-weight: 600;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 6px rgba(62, 39, 35, 0.05);
   transition: all 0.3s ease;
   user-select: none;
 }
 
 .ramo:hover {
-  background: linear-gradient(145deg, #eeeeee, #e0e0e0);
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
-  color: #000000; /* Negro puro al hover */
+  background: linear-gradient(145deg, #d7ccc8, #bcaaa4);
+  box-shadow: 3px 3px 8px rgba(62, 39, 35, 0.1);
+  color: #3e2723; /* Marrón más oscuro al hover */
   transform: translateY(-2px);
 }
 
 .ramo:active {
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 4px rgba(62, 39, 35, 0.1);
   transform: translateY(1px);
 }
 
 .ramo.bloqueado {
-  background-color: #fafafa;
-  color: #9e9e9e; /* Gris claro para texto bloqueado */
+  background-color: #efebe9;
+  color: #8d6e63; /* Marrón claro para texto bloqueado */
   border-style: dashed;
-  border-color: #bdbdbd;
+  border-color: #a1887f;
   cursor: not-allowed;
   box-shadow: none;
-  background: linear-gradient(145deg, #fafafa, #f5f5f5);
+  background: linear-gradient(145deg, #efebe9, #d7ccc8);
 }
 
 .ramo.aprobado {
-  background: linear-gradient(145deg, #e0e0e0, #bdbdbd) !important;
-  color: #424242;
-  border-color: #9e9e9e;
+  background: linear-gradient(145deg, #bcaaa4, #8d6e63) !important;
+  color: #fff8e1; /* Texto claro sobre fondo oscuro */
+  border-color: #5d4037;
   text-decoration: line-through;
   font-style: italic;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 6px rgba(62, 39, 35, 0.1);
 }
 
 /* Media queries para ajustes responsivos */
