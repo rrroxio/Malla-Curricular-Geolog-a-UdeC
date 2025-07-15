@@ -61,20 +61,48 @@ const MallaManager = {
     localStorage.setItem('mallaAprobados', JSON.stringify(courses));
   },
 
+  // Función para verificar si un curso puede ser aprobado
+  canApproveCourse(courseId, approvedCourses) {
+    const requirements = prerequisitos[courseId] || [];
+    return requirements.length === 0 || requirements.every(req => approvedCourses.includes(req));
+  },
+
+  // Función para encontrar todos los cursos que dependen de un curso específico
+  getDependentCourses(courseId) {
+    return Object.keys(prerequisitos).filter(id => 
+      prerequisitos[id].includes(courseId)
+    );
+  },
+
+  // Actualiza el estado de todos los cursos
   updateCourseStatus() {
     const approved = this.getApprovedCourses();
     
-    Object.entries(prerequisitos).forEach(([courseId, requirements]) => {
+    // Primero actualizamos todos los cursos
+    Object.keys(prerequisitos).forEach(courseId => {
       const element = document.getElementById(courseId);
       if (!element) return;
 
       const isApproved = approved.includes(courseId);
-      const canUnlock = requirements.length === 0 || requirements.every(req => approved.includes(req));
+      const canUnlock = this.canApproveCourse(courseId, approved);
 
       if (isApproved) {
-        element.classList.remove('bloqueado');
-        element.classList.add('aprobado');
+        // Si está aprobado pero ya no cumple los requisitos, lo desaprobamos
+        if (!canUnlock) {
+          element.classList.remove('aprobado');
+          element.classList.add('bloqueado');
+          // Eliminamos de la lista de aprobados
+          const index = approved.indexOf(courseId);
+          if (index > -1) {
+            approved.splice(index, 1);
+          }
+          this.saveApprovedCourses(approved);
+        } else {
+          element.classList.remove('bloqueado');
+          element.classList.add('aprobado');
+        }
       } else {
+        // Si no está aprobado, actualizamos su estado de bloqueo
         element.classList.toggle('bloqueado', !canUnlock);
         element.classList.remove('aprobado');
       }
@@ -88,12 +116,33 @@ const MallaManager = {
     const courseId = courseElement.id;
     const approvedCourses = this.getApprovedCourses();
     const courseIndex = approvedCourses.indexOf(courseId);
-    const isNowApproved = courseElement.classList.toggle('aprobado');
+    
+    // Verificamos si estamos aprobando o desaprobando
+    const isNowApproved = !courseElement.classList.contains('aprobado');
 
-    if (isNowApproved && courseIndex === -1) {
-      approvedCourses.push(courseId);
-    } else if (!isNowApproved && courseIndex !== -1) {
+    if (isNowApproved) {
+      // Solo aprobamos si cumple con los requisitos
+      if (this.canApproveCourse(courseId, approvedCourses)) {
+        courseElement.classList.add('aprobado');
+        approvedCourses.push(courseId);
+      }
+    } else {
+      // Al desaprobar, necesitamos verificar cursos dependientes
+      courseElement.classList.remove('aprobado');
       approvedCourses.splice(courseIndex, 1);
+      
+      // Encontramos y desaprobamos cursos que dependían de este
+      const dependents = this.getDependentCourses(courseId);
+      dependents.forEach(depId => {
+        const depElement = document.getElementById(depId);
+        if (depElement && depElement.classList.contains('aprobado')) {
+          depElement.classList.remove('aprobado');
+          const depIndex = approvedCourses.indexOf(depId);
+          if (depIndex > -1) {
+            approvedCourses.splice(depIndex, 1);
+          }
+        }
+      });
     }
 
     this.saveApprovedCourses(approvedCourses);
