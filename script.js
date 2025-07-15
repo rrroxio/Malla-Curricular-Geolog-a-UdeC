@@ -27,7 +27,7 @@ const prerequisitos = {
   'ingles3': ['ingles2'],
   'ignea': ['optica','gqca'],
   'economia': [],
-  'estrati2': ['estrati1', 'paleo'], // Corregido: era 'estrati' en lugar de 'estrati1'
+  'estrati2': ['estrati1', 'paleo'], 
   'estructural': ['petro'],
   'ingles4': ['ingles3'],
   'metamorfica': ['ignea'],
