@@ -29,7 +29,7 @@ const prerequisitos = {
   'economia': [],
   'estrati2': ['estrati', 'paleo'],
   'estructural': ['petro'],
-  'ingles4': ['ingles3']
+  'ingles4': ['ingles3'],
   'metamorfica': ['ignea'],
   'sedimentaria': ['ignea', 'estrati2'],
   'geomorfo': ['estrati2', 'estructural'],
